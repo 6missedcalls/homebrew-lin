@@ -1,22 +1,22 @@
 class Lin < Formula
   desc "Fast, terminal-native client for Linear"
   homepage "https://github.com/6missedcalls/lin-cli"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/6missedcalls/lin-cli/releases/download/v0.1.0/lin-darwin-arm64.tar.gz"
-      sha256 "37d86f31222b3d9c9d569fd282f157d362e85a472a1de4a91c5dcdff1581c1dd"
+      url "https://github.com/6missedcalls/lin-cli/releases/download/v0.2.0/lin-darwin-arm64.tar.gz"
+      sha256 "bc06a3fe0013df3b54981a12ef5340f6d156e356ee2a972b06ce10da46513db9"
     else
-      url "https://github.com/6missedcalls/lin-cli/releases/download/v0.1.0/lin-darwin-x86_64.tar.gz"
-      sha256 "2ca6d02347b14ecb1b2f8276f6702f0e0180548c438c11d74af2e552c4d53c19"
+      url "https://github.com/6missedcalls/lin-cli/releases/download/v0.2.0/lin-darwin-x86_64.tar.gz"
+      sha256 "111bc259a5f38efdf864aa3fa6d49f56c85285af7baa875cc57aff7e48520d9e"
     end
   end
 
   on_linux do
-    url "https://github.com/6missedcalls/lin-cli/releases/download/v0.1.0/lin-linux-x86_64.tar.gz"
-    sha256 "56a0e9d72d678a8d1c5e0e7308bd9067896673dee129540d60654eb95a04329b"
+    url "https://github.com/6missedcalls/lin-cli/releases/download/v0.2.0/lin-linux-x86_64.tar.gz"
+    sha256 "a78f74180d775d6d09de2ff87e3db28247805a8835eb5afd26169d9864a7d8dd"
   end
 
   def install
@@ -24,6 +24,6 @@ class Lin < Formula
   end
 
   test do
-    assert_match "lin 0.1.0", shell_output("#{bin}/lin --version")
+    assert_match "v0.2.0", shell_output("#{bin}/lin --version")
   end
 end
